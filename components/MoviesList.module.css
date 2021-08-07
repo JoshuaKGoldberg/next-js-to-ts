@@ -1,0 +1,14 @@
+.selects {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: auto;
+  max-width: 50rem;
+}

@@ -1,0 +1,40 @@
+.movie {
+  background: none;
+  border: 2px solid black;
+  box-shadow: -2px 2px #004998;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 17.5rem;
+  padding: 0.5rem;
+  position: relative;
+  text-align: left;
+  transition: 250ms box-shadow;
+  width: 15rem;
+}
+
+.movie:hover {
+  box-shadow: -6px 6px #004998;
+}
+
+.name {
+  font-size: 2rem;
+  margin: 0 1.5rem 0.5rem 0;
+}
+
+.star {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.year {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+}

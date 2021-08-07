@@ -1,0 +1,9 @@
+.star {
+  font-size: 2rem;
+  transition: 350ms transform;
+}
+
+.notFavorite {
+  filter: grayscale(100);
+  transform: scale(0.5);
+}

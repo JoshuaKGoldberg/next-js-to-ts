@@ -1,0 +1,14 @@
+.description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.me {
+  color: #004998;
+}
+
+.unbroken {
+  display: inline-block;
+  white-space: nowrap;
+}
