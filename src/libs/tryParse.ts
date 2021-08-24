@@ -1,4 +1,4 @@
-export function tryParse(data) {
+export function tryParse(data: string) {
   try {
     return JSON.parse(data);
   } catch {

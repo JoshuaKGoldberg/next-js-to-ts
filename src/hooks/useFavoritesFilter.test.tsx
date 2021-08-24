@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 
 import { createStubMovie } from "../data/__fixtures__/movie";

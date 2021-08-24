@@ -1,9 +1,15 @@
 import Head from "next/head";
 
-import { Footer } from "./footer";
+import { Footer } from "./Footer";
 import styles from "./Layout.module.css";
 
-export function Layout({ children, description, title }) {
+export interface LayoutProps {
+  children: React.ReactNode;
+  description: string;
+  title: string;
+}
+
+export function Layout({ children, description, title }: LayoutProps) {
   return (
     <div className={styles.layout}>
       <Head>

@@ -6,13 +6,13 @@ const initialValue = {
 };
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useLocalStorageItem(
+  const [favorites, setFavorites] = useLocalStorageItem<Record<string, boolean>>(
     "movies-favorite",
     blankValue,
     initialValue
   );
 
-  const toggleFavorite = (name) => {
+  const toggleFavorite = (name: string) => {
     const updated = {
       ...favorites,
       [name]: !favorites[name],
@@ -21,5 +21,5 @@ export function useFavorites() {
     setFavorites(updated);
   };
 
-  return [favorites, toggleFavorite];
+  return [favorites, toggleFavorite] as const;
 }
