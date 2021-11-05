@@ -1,7 +1,7 @@
 # next-js-to-ts
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-It's part of my TSConf 2021 workshop on converting a React app to TypeScript.
+It's part of my workshop series on converting a React app to TypeScript.
 
 ## Getting Started
 
