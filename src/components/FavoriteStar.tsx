@@ -2,7 +2,12 @@ import cx from "classnames";
 
 import styles from "./FavoriteStar.module.css";
 
-export function FavoriteStar({ className, favorite }) {
+export interface FavoriteStarProps {
+  className: string;
+  favorite: boolean;
+}
+
+export function FavoriteStar({ className, favorite }: FavoriteStarProps) {
   return (
     <span
       aria-label={favorite ? "Favorite" : "Not a favorite"}

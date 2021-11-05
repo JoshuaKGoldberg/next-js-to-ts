@@ -1,4 +1,7 @@
+import { FavoritesData } from "../data/types";
 import { useLocalStorageItem } from "./useLocalStorageItem";
+
+// todo: unify? move to shared location?
 
 const blankValue = {};
 const initialValue = {
@@ -6,13 +9,17 @@ const initialValue = {
 };
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useLocalStorageItem(
+  const pair = useLocalStorageItem<FavoritesData>(
     "movies-favorite",
     blankValue,
     initialValue
   );
 
-  const toggleFavorite = (name) => {
+  // pair[0] = {};
+
+  const [favorites, setFavorites] = pair;
+
+  const toggleFavorite = (name: string) => {
     const updated = {
       ...favorites,
       [name]: !favorites[name],
@@ -21,5 +28,5 @@ export function useFavorites() {
     setFavorites(updated);
   };
 
-  return [favorites, toggleFavorite];
+  return [favorites, toggleFavorite] as const;
 }

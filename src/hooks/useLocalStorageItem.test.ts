@@ -22,8 +22,37 @@ describe(useLocalStorageItem, () => {
     localStorage.setItem(key, `"${updatedValue}"`);
 
     const hook = renderHook(() => useLocalStorageItem(key, blankValue));
+    
+    // function workWithUnsafeData(data: unknown) {
+    //   data.toUpperCase();
 
-    await act(async () => {});
+
+    //   if (typeof data === 'string') {
+    //     data.toUpperCase();
+    //   }
+
+
+    //   if (typeof data === 'number') {
+    //     data.toExponential();
+    //     data.toString();
+    //   } else if (typeof data === 'number' || typeof data === 'boolean') {
+    //     data.toString();
+       
+       
+    //     data.toExponential();
+    //   }
+
+
+    //   data.toUpperCase();
+    // }
+
+    // // await act(async () => {});
+    // await new Promise<void>((resolve) => {
+    //   act(async () => {})
+    //     .then(() => {
+    //       resolve();
+    //     });
+    // })
 
     expect(hook.result.current[0]).toBe(updatedValue);
   });

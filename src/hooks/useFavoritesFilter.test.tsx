@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 
 import { createStubMovie } from "../data/__fixtures__/movie";
@@ -7,6 +7,7 @@ import { useFavoritesFilter } from "./useFavoritesFilter";
 
 const apple = createStubMovie({
   id: "apple",
+  // description: 'asldfkjasldfkja',
 });
 
 const banana = createStubMovie({
@@ -31,6 +32,7 @@ describe(useFavoritesFilter, () => {
   });
 
   it("filters to All when selected to", () => {
+    // const { result } = renderHook(...)
     const hook = renderHook(() => useFavoritesFilter(favorites));
 
     const select = render(hook.result.current[0]);

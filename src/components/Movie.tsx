@@ -1,16 +1,23 @@
 import { Fragment } from "react";
+import { MovieData } from "../data/types";
 
 import { FavoriteStar } from "./FavoriteStar";
 import styles from "./Movie.module.css";
 
-export function Movie({ className, favorite, movie, toggleFavorite }) {
+export interface MovieProps {
+  favorite: boolean;
+  movie: MovieData;
+  // toggleFavorite: Function; // no can do!
+  toggleFavorite: () => void;
+}
+
+export function Movie({ favorite, movie, toggleFavorite }: MovieProps) {
   return (
     <button className={styles.movie} onClick={toggleFavorite} type="button">
       <h2 className={styles.name}>{movie.name}</h2>
       <FavoriteStar
         className={styles.star}
         favorite={favorite}
-        toggleFavorite={toggleFavorite}
       />
       <p className={styles.description}>{movie.description}</p>
       <p>
