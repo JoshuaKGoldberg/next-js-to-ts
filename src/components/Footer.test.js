@@ -1,5 +1,5 @@
 import { setupRtl } from "component-test-setup";
-import Footer from "./Footer";
+import {Footer} from "./Footer";
 
 
 const renderView = setupRtl(Footer, {
