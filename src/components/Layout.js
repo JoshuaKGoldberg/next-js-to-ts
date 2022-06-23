@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Footer } from "./footer";
+import { Footer } from "./Footer";
 import styles from "./Layout.module.css";
 
 export function Layout({ children, description, title }) {
