@@ -1,6 +1,12 @@
 import styles from "./Select.module.css";
 
-export function Select({ onChange, options, selected }) {
+export interface SelectProps {
+  onChange: (value: string) => void;
+  options: string[];
+  selected: string;
+}
+
+export function Select({ onChange, options, selected }: SelectProps) {
   return (
     <select
       className={styles.select}

@@ -1,7 +1,11 @@
 import { useLocalStorageItem } from "./useLocalStorageItem";
 
-const blankValue = {};
-const initialValue = {
+interface Favorites {
+  [id: string]: boolean;
+}
+
+const blankValue: Favorites = {};
+const initialValue: Favorites = {
   "a29da595-c7cf-58ea-9111-e0c1dc712b78": true,
 };
 
@@ -12,14 +16,14 @@ export function useFavorites() {
     initialValue
   );
 
-  const toggleFavorite = (name) => {
+  const toggleFavorite = (id: string) => {
     const updated = {
       ...favorites,
-      [name]: !favorites[name],
+      [id]: !favorites[id],
     };
 
     setFavorites(updated);
   };
 
-  return [favorites, toggleFavorite];
+  return [favorites, toggleFavorite] as const;
 }

@@ -1,0 +1,23 @@
+import React from "react";
+
+export interface FormDialogProps {
+  initialText: string;
+  onChange: (newText: string) => void;
+}
+
+export const FormDialog: React.FC<FormDialogProps> = ({
+  initialText,
+  onChange,
+}) => {
+  return (
+    <form>
+      <input
+        type="text"
+        value={initialText}
+        onChange={(event) => {
+          onChange(event.target.value);
+        }}
+      />
+    </form>
+  );
+};
