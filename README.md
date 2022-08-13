@@ -46,4 +46,4 @@ To learn more about TypeScript, take a look at the following resources:
 
 - [TypeScript Documentation](https://typescriptlang.org/docs) - learn about TypeScript features and syntax.
 - [TypeScript Handbook](https://typescriptlang.org/handbook) - a start-to-finish guide to TypeScript.
-- _[Learning TypeScript](https://learningtypescript.com) - I wrote a book that takes you from just knowing foundations of JavaScript to full TypeScript capability! :sparkles:
+- _[Learning TypeScript](https://learningtypescript.com)_ - I wrote a book that takes you from just knowing foundations of JavaScript to full TypeScript capability! :sparkles:
