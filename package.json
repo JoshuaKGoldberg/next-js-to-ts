@@ -2,7 +2,7 @@
   "description": "Sample repository showing a React app for a JS to TS conversion.",
   "dependencies": {
     "classnames": "^2.3.1",
-    "next": "11.0.1",
+    "next": "13.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
